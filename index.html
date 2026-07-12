@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ing.Mohamed Ahmed — Senior Web Developer</title>
+  <meta name="description" content="Ultra-premium portfolio of ing.Mohamed Ahmed. WordPress architecture, Shopify, React, Node.js, Elite UI/UX." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════ SPIDERMAN INTRO OVERLAY ════════ -->
+  <div id="intro" aria-hidden="true">
+    <div id="webString"></div>
+    <div id="spidey">
+      <!-- ⚠️ PLACEHOLDER: swap this div's contents with a transparent
+           GIF/PNG or a mounted 3D model (e.g. <img src="spiderman.png">).
+           The emoji stands in so the animation is testable immediately. -->
+      <div class="spidey__body">🕷️</div>
+      <div class="spidey__hand">👋</div>
+    </div>
+  </div>
+
+  <!-- ════════ MONSTER EYE BACKGROUND ════════ -->
+  <canvas id="eyeCanvas" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ════════ MAIN CONTENT (hidden until intro ends) ════════ -->
+  <main id="site" class="is-hidden">
+
+    <!-- HEADER -->
+    <header class="nav">
+      <a href="#hero" class="brand">ing.<span>Mohamed Ahmed</span></a>
+      <nav class="nav__links">
+        <a href="#arsenal">Arsenal</a>
+        <a href="#vault">Vault</a>
+        <a href="#voices">Clients</a>
+        <a href="#contract" class="nav__cta">The Contract</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <p class="eyebrow">// SENIOR WEB DEVELOPER — THE EYE IS WATCHING</p>
+      <h1 class="hero__name glitch" data-text="ing.Mohamed Ahmed">ing.Mohamed Ahmed</h1>
+      <p class="hero__tag">I engineer digital weapons: platforms, stores, and systems<br />that dominate their markets.</p>
+      <div class="hero__stats">
+        <div><strong data-count="50">0</strong><span>Projects Shipped</span></div>
+        <div><strong data-count="7">0</strong><span>Years in Combat</span></div>
+        <div><strong data-count="100">0</strong><span>% Client Retention</span></div>
+      </div>
+    </section>
+
+    <!-- THE ARSENAL -->
+    <section class="section" id="arsenal">
+      <h2 class="section__title"><i class="fa-solid fa-bolt"></i> The Arsenal</h2>
+      <div class="arsenal">
+        <div class="skill" data-lvl="96"><i class="fa-brands fa-wordpress"></i><h3>Custom WordPress Architecture</h3><div class="skill__bar"><span></span></div><em>96%</em></div>
+        <div class="skill" data-lvl="92"><i class="fa-brands fa-shopify"></i><h3>Shopify Liquid</h3><div class="skill__bar"><span></span></div><em>92%</em></div>
+        <div class="skill" data-lvl="90"><i class="fa-brands fa-react"></i><h3>React</h3><div class="skill__bar"><span></span></div><em>90%</em></div>
+        <div class="skill" data-lvl="88"><i class="fa-brands fa-node-js"></i><h3>Node.js</h3><div class="skill__bar"><span></span></div><em>88%</em></div>
+        <div class="skill" data-lvl="95"><i class="fa-solid fa-pen-ruler"></i><h3>Elite UI/UX Design</h3><div class="skill__bar"><span></span></div><em>95%</em></div>
+      </div>
+    </section>
+
+    <!-- THE VAULT — 50+ PROJECTS -->
+    <section class="section" id="vault">
+      <h2 class="section__title"><i class="fa-solid fa-vault"></i> The 50+ Projects Vault</h2>
+      <div class="vault" id="vaultGrid"><!-- cards injected by script.js --></div>
+      <button class="btn btn--load" id="loadMore">LOAD MORE <i class="fa-solid fa-angles-down"></i></button>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="voices">
+      <h2 class="section__title"><i class="fa-solid fa-quote-left"></i> Client Voices</h2>
+      <div class="carousel glass">
+        <div class="carousel__track" id="carouselTrack"><!-- slides injected --></div>
+        <div class="carousel__dots" id="carouselDots"></div>
+      </div>
+    </section>
+
+    <!-- THE WHATSAPP CONTRACT -->
+    <section class="section section--narrow" id="contract">
+      <h2 class="section__title"><i class="fa-brands fa-whatsapp"></i> The Contract</h2>
+      <form class="glass contract" id="contractForm" novalidate>
+        <div class="row2">
+          <div class="field"><label for="cName">Codename / Name</label><input id="cName" type="text" required placeholder="Your name" /></div>
+          <div class="field"><label for="cBudget">Budget</label>
+            <select id="cBudget"><option>$2,000 – $5,000</option><option>$5,000 – $10,000</option><option>$10,000+</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="cType">Mission Type</label><input id="cType" type="text" placeholder="WordPress build, Shopify store, React app…" /></div>
+        <div class="field"><label for="cMsg">Mission Briefing</label><textarea id="cMsg" rows="5" required placeholder="Describe the project…"></textarea></div>
+        <button type="submit" class="btn btn--primary">SIGN &amp; SEND VIA WHATSAPP <i class="fa-brands fa-whatsapp"></i></button>
+      </form>
+    </section>
+
+    <footer class="footer">© 2026 ing.Mohamed Ahmed — Built, not assembled.</footer>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/201128182537" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <!-- CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
