@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ing. Mohamed Ahmed — Full-Stack Developer</title>
+  <meta name="description" content="Ing. Mohamed Ahmed — World-class full-stack developer building premium digital products, e-commerce, SaaS MVPs, and AI-integrated applications for clients worldwide." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Three.js & GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- NAVIGATION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">M<span class="accent">.</span>Ahmed</a>
+    <div class="nav__links">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="nav__cta">Hire Me</a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#skills" class="mobile-menu__link">Skills</a>
+    <a href="#projects" class="mobile-menu__link">Projects</a>
+    <a href="#testimonials" class="mobile-menu__link">Testimonials</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <!-- Project Page (Full Screen) -->
+  <div class="project-page" id="projectPage">
+    <button class="project-page__back" id="projectBack">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Back</span>
+    </button>
+    <div class="project-page__images" id="projectImages"></div>
+    <div class="project-page__content">
+      <h2 class="project-page__title" id="projectTitle"></h2>
+      <p class="project-page__desc" id="projectDesc"></p>
+      <div class="project-page__price" id="projectPrice"></div>
+      <div class="project-page__tags" id="projectTags"></div>
+      <a href="#contact" class="btn btn--primary project-page__cta">
+        <span>Start Similar Project</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__label reveal-up">Full-Stack Developer &bull; Globally Operating</p>
+      <span class="hero__name reveal-up">Ing. Mohamed Ahmed</span>
+      <h1 class="hero__title">
+        <span class="reveal-line"><span>Building premium</span></span>
+        <span class="reveal-line"><span class="accent-gradient">digital products</span></span>
+        <span class="reveal-line"><span>for clients worldwide</span></span>
+      </h1>
+      <p class="hero__sub reveal-up">
+        Full-stack web development &bull; E-commerce (Shopify) &bull; SaaS MVPs &bull; AI-Integrated Applications
+      </p>
+      <a href="#contact" class="btn btn--primary magnetic reveal-up">
+        <span>Start a Project</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SKILLS SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-label reveal-up">Technical Arsenal</p>
+      <h2 class="section-title reveal-up">Skills &amp; Technologies</h2>
+      <div class="skills__grid">
+        <!-- Frontend -->
+        <div class="skill-category reveal-up">
+          <h3 class="skill-category__title">Frontend</h3>
+          <div class="skill-category__badges">
+            <span class="badge">React</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge">GSAP</span>
+            <span class="badge">Three.js</span>
+          </div>
+        </div>
+        <!-- Backend & Infra -->
+        <div class="skill-category reveal-up">
+          <h3 class="skill-category__title">Backend &amp; Infra</h3>
+          <div class="skill-category__badges">
+            <span class="badge">Node.js</span>
+            <span class="badge">Firebase</span>
+            <span class="badge">Vercel</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">API Integration</span>
+          </div>
+        </div>
+        <!-- E-commerce -->
+        <div class="skill-category reveal-up">
+          <h3 class="skill-category__title">E-Commerce</h3>
+          <div class="skill-category__badges">
+            <span class="badge">Shopify</span>
+            <span class="badge">Liquid</span>
+            <span class="badge">Custom Themes</span>
+            <span class="badge">WooCommerce</span>
+          </div>
+        </div>
+        <!-- AI -->
+        <div class="skill-category reveal-up">
+          <h3 class="skill-category__title">AI Integration</h3>
+          <div class="skill-category__badges">
+            <span class="badge">Gemini API</span>
+            <span class="badge">LLM Features</span>
+            <span class="badge">AI Companions</span>
+            <span class="badge">RAG Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PROJECTS SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <p class="section-label reveal-up">Selected Work</p>
+      <h2 class="section-title reveal-up">Featured Projects</h2>
+      <div class="projects__grid">
+
+        <!-- Project 1: Zakerly -->
+        <article class="project-card reveal-up" data-project="zakerly">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+            <span class="project-card__placeholder">ذ</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Zakerly <span class="project-card__ar">(ذاكرلي)</span></h3>
+            <p>An Arabic-language adaptive learning platform for Egyptian high school students. Built with a full technical spec and deployed MVP.</p>
+            <div class="project-card__tags">
+              <span>React</span><span>Node.js</span><span>AI</span><span>EdTech</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Meafer.ai -->
+        <article class="project-card reveal-up" data-project="meafer">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 50%, #415a77 100%);">
+            <span class="project-card__placeholder">M</span>
+          </div>
+          <div class="project-card__body">
+            <h3>Meafer.ai</h3>
+            <p>An AI-powered e-learning platform for Egyptian Thanaweya Amma students with PDF-to-summary/quiz/flashcard generation.</p>
+            <div class="project-card__tags">
+              <span>Next.js</span><span>Gemini API</span><span>SaaS</span><span>Payments</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: OBLO -->
+        <article class="project-card reveal-up" data-project="oblo">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);">
+            <span class="project-card__placeholder">O</span>
+          </div>
+          <div class="project-card__body">
+            <h3>OBLO</h3>
+            <p>A premium WordPress/WooCommerce e-commerce experience built end-to-end with custom design and optimized checkout.</p>
+            <div class="project-card__tags">
+              <span>WordPress</span><span>WooCommerce</span><span>E-Commerce</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: SignalGuard PRO -->
+        <article class="project-card reveal-up" data-project="signalguard">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #1a1a2e 0%, #e94560 100%);">
+            <span class="project-card__placeholder">S</span>
+          </div>
+          <div class="project-card__body">
+            <h3>SignalGuard PRO</h3>
+            <p>A server-side conversion tracking SaaS built for Shopify stores with accurate attribution and real-time analytics.</p>
+            <div class="project-card__tags">
+              <span>Shopify</span><span>SaaS</span><span>Node.js</span><span>Analytics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: URBX -->
+        <article class="project-card reveal-up" data-project="urbx">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #0a0a0f 0%, #333333 50%, #1a1a1a 100%);">
+            <span class="project-card__placeholder">U</span>
+          </div>
+          <div class="project-card__body">
+            <h3>URBX</h3>
+            <p>A full RTL-supported streetwear Shopify theme with bold aesthetics and optimized performance.</p>
+            <div class="project-card__tags">
+              <span>Shopify</span><span>Liquid</span><span>RTL</span><span>Theme</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: VEYRON -->
+        <article class="project-card reveal-up" data-project="veyron">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+            <span class="project-card__placeholder">V</span>
+          </div>
+          <div class="project-card__body">
+            <h3>VEYRON</h3>
+            <p>A luxury car 3D interactive showcase piece with real-time 3D rendering and cinematic camera transitions.</p>
+            <div class="project-card__tags">
+              <span>Three.js</span><span>WebGL</span><span>3D</span><span>Interactive</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Placeholder 1 -->
+        <article class="project-card project-card--placeholder reveal-up" data-project="saas-dashboard">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+            <span class="project-card__placeholder project-card__placeholder--soon">?</span>
+          </div>
+          <div class="project-card__body">
+            <h3>SaaS Dashboard <span class="badge badge--soon">Coming Soon</span></h3>
+            <p>An advanced analytics and management dashboard for enterprise SaaS products with real-time data visualization.</p>
+            <div class="project-card__tags">
+              <span>React</span><span>Next.js</span><span>SaaS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Placeholder 2 -->
+        <article class="project-card project-card--placeholder reveal-up" data-project="ai-marketplace">
+          <div class="project-card__img" style="background: linear-gradient(135deg, #0d1b2a 0%, #415a77 100%);">
+            <span class="project-card__placeholder project-card__placeholder--soon">?</span>
+          </div>
+          <div class="project-card__body">
+            <h3>AI Marketplace <span class="badge badge--soon">Coming Soon</span></h3>
+            <p>A curated marketplace for AI-powered micro-tools and automations with one-click integrations.</p>
+            <div class="project-card__tags">
+              <span>AI</span><span>Marketplace</span><span>Stripe</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TESTIMONIALS SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <p class="section-label reveal-up">Client Feedback</p>
+      <h2 class="section-title reveal-up">What People Say</h2>
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal-up">
+          <p class="testimonial-card__quote">"Mohamed delivered a world-class product that exceeded our expectations. His technical depth and attention to detail are remarkable."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AK</div>
+            <div>
+              <strong>Ahmed Khalid</strong>
+              <span>CEO, Tech Startup</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up">
+          <p class="testimonial-card__quote">"The e-commerce store he built for us doubled our conversion rate within the first month. Incredible work, highly recommended."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">SR</div>
+            <div>
+              <strong>Sara Rizk</strong>
+              <span>Founder, Fashion Brand</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up">
+          <p class="testimonial-card__quote">"Working with Mohamed was seamless. He understood our vision immediately and delivered a polished SaaS product on time and on budget."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MH</div>
+            <div>
+              <strong>Mostafa Hassan</strong>
+              <span>CTO, Digital Agency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONTACT SECTION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section-label reveal-up">Get In Touch</p>
+      <h2 class="section-title reveal-up">Let's Build Something Great</h2>
+      <div class="contact__wrapper">
+        <form class="contact__form reveal-up" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="projectType" required>
+              <option value="" disabled selected>Select project type</option>
+              <option value="Web App">Web App</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="SaaS MVP">SaaS MVP</option>
+              <option value="AI Integration">AI Integration</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="form-error" id="projectTypeError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span>Send via WhatsApp</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Opening WhatsApp...</span>
+          </div>
+        </form>
+        <div class="contact__info reveal-up">
+          <h3>Prefer to reach out directly?</h3>
+          <p>Feel free to message me anytime. I typically respond within a few hours.</p>
+          <div class="contact__details">
+            <p><strong>Location:</strong> Giza, Egypt</p>
+            <p><strong>Availability:</strong> Open for freelance projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#hero" class="footer__logo">M<span class="accent">.</span>Ahmed</a>
+        <p class="footer__tagline">Building the future, one line of code at a time.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="GitHub" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://wa.me/201128182537" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Ing. Mohamed Ahmed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
